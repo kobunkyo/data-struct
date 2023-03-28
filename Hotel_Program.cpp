@@ -38,12 +38,12 @@ int hashKey(char* id){
 
 void insert(struct Hotel* data){
 	int key = hashKey(data->id);
-	if( !table[key] ){
+	if( table[key]==NULL ){
 		table[key] = data;
 		tail[key] = data;
 	}
-	else if( table[key] ){
-		data->next = tail[key];
+	else if( table[key]!=NULL ){
+		tail[key]->next = data;
 		tail[key] = data;
 	}
 	count++;
@@ -62,11 +62,11 @@ void insert(struct Hotel* data){
 	fflush(stdin);
 }
 
-// Gak muncul semua
 void view(){
 	system("cls");
 	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 	for(int i=0; i<SIZE; i++){
+		printf("i = %d\n\n", i);
 		struct Hotel* temp = table[i];
 		while(temp){
 			printf("\t+-------------------------------------------------+\n");
