@@ -23,6 +23,7 @@ void search(struct node* curr, int find) {
 
 void insert(struct node* curr, int val) {
 	struct node *new_node = (struct node*) malloc(sizeof(struct node));
+// Pemborosan memori
 	new_node->key = val;
 	new_node->left = NULL;
 	new_node->right = NULL;
