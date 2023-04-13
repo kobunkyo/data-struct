@@ -1,0 +1,51 @@
+1 Byte = 8  bit
+
+char  = 1 Byte
+int = 4 Byte
+Kenapa?
+Dalam 1 Byte ada 8 slot yang dapat membentuk sebuah kombinasi biner
+_ _ _ _ _ _ _ _ = maks 255 (dalam desimal) atau 1111 1111 
+
+Dengan demikian, banyaknya bit memengaruhi penggunaan integer yang ada pada suatu program
+------------------------------------------------------------------------------------------
+Yang dipelajari
+-Arrays
+-Linked lists (seperti kereta)
+-Queues 
+-Stacks (tumpukan barang)
+-Binary trees (pohon)
+-Hash tables
+
+
+1)Array: bisa langsung tau lokasi data yang dimau, misalnya data ke 3 dan langsung dicari ke index 2
+  Sifatnya statik dan harus di panggil berapa banyak yang akan dipakai
+  Solusi dari sifat array ini adalah linked list
+  
+**Linked list tidak bisa langsung tahu data terakhir sedangkan array bisa
+
+2)Linked list
+	Head (data pertama)
+	Tail (opsional)(data terakhir)
+	Misal (NULL)34(lokasi 27), (lokasi 34)27(lokasi 13), (lokasi 27)13(NULL)
+		       Node						 Node					   Node
+	
+	Tidak bisa langsung lihat data ke 2, harus hitung dari awal
+	Jika data 27 hilang, urutan akan menjadi kacau karena satu sama lain saling bergantung
+	Akan ada struct dan pointer jika diimplementasikan didalam koding
+	
+	Ada multiple Linked list seperti data 27
+	
+	Operasi dalam LL
+	-> Push (Nambah data)
+		Push head
+		Push mid // kondisi khusus untuk Multiple Linked List
+		Push tail
+	-> Pop (Hapus data)
+		Pop head
+		Pop tail
+	-> View (Liat data)
+
+3)Binary Search Tree
+	Asal mula: tree -> binary tree -> binary search tree (bst) -> balanced bst
+	Binary tree: dari tree tetapi anaknya di beri batasan dua bukan tak hingga
+
